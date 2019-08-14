@@ -1,0 +1,79 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class='govuk-heading-xl'>
+          How to create your list of ingredients
+      </h1>
+
+      <p class='govuk-!-margin-bottom-1'>
+        If you notify using exact concentrations or concentration ranges, you need to create a document which lists the cosmetic product’s ingredients: 
+      </p>
+      <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-0">
+        <li>for every new notification</li>
+        <li>where a product’s formulation has changed significantly</li>
+      </ul>
+
+
+      <h2 class='govuk-heading-m'>
+        Ingredients document
+      </h2>
+      <p>
+        Use the International Nomenclature of Cosmetic Ingredients (INCI) name and its exact concentration as a percentage weight for weight (% w/w).
+      </p>
+
+      {% include "../includes/document_types.html" %}
+
+      <h3 class='govuk-heading-s'>
+        Harmful ingredients
+      </h3>
+
+      {% include "../includes/harmful_ingredients.html" %}
+
+      <p>
+        After you’ve added ingredients of concern, list all other ingredients in decreasing order of concentration.
+      </p>
+
+
+      <h3 class='govuk-heading-s'>
+        Exact concentration
+      </h3>
+      <p>
+        List all the ingredients as exact quantities using % w/w.
+      </p>
+
+      <h3 class='govuk-heading-s'>
+        Concentration ranges
+      </h3>
+      <p class='govuk-!-margin-bottom-1'>
+        You must report (using % w/w) for the following ranges:
+      </p>
+      <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-0">
+        <li>up to and including 0.1% </li>
+        <li>above 0.1%, up to and including 1% </li>
+        <li>above 1%, up to and including 5% </li>
+        <li>above 5%, up to and including 10% </li>
+        <li>above 10%, up to and including 25% </li>
+        <li>above 25%, up to and including 50% </li>
+        <li>above 50%, up to and including 75% </li>
+        <li>above 75%, up to and including 100%</li>
+      </ul>
+
+    </div>
+  </div>
+{% endblock %}
+
+

@@ -1,0 +1,59 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Home",
+    href: "../index"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        How to prepare a cosmetic product notification
+      </h1>
+      <h2 class='govuk-heading-m'>
+        How to provide information
+      </h2>
+      <p>
+        There are 2 ways to submit a cosmetic product notification: Using your data from an EU notification or giving information manually.
+      </p>
+      <h3 class='govuk-heading-s'>
+        Using an EU notification file
+      </h3>
+      <p class="govuk-!-margin-bottom-1">
+        If your products have been notified in the EU, you can use the data you supplied for your
+        EU notification. You will need to:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          export your data as a ZIP file for each notification – this needs to be the same format as exported from CPNP
+        </li>
+        <li>
+          upload the ZIP files
+        </li>
+      </ul>
+      <p>
+        You can upload 100 files at a time.
+      </p>
+      <h3 class="govuk-heading-s">
+        Manually
+      </h3>
+      <p>
+        If your products have not been notified in the EU, you need to manually enter information about the product.
+      </p>
+      <h2 class="govuk-heading-m">
+        What information to provide
+      </h2>
+    </div>
+  </div>
+{% endblock %}
+
+

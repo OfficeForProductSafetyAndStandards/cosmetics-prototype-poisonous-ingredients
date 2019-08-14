@@ -1,0 +1,73 @@
+  
+{% extends "homepage-layout.html" %}
+
+{% set showAppHeader = true %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p>
+          If you sell or give away cosmetic products in the UK, you now need to submit a notification for every product. This covers products already notified to the EU Cosmetic Product Notification Portal (CPNP) before <span class="no-wrap">12 April 2019</span> (Brexit), as well as products you’ve brought to market since then.
+        </p>
+        <p>
+          You do not have to submit notifications for cosmetic products taken off the market in the UK before <span class="no-wrap">12 April 2019</span>.
+        </p>
+        <h2 class="govuk-heading-m">
+          If your products were not notified in the EU before <span class="no-wrap">12 April 2019</span> (Brexit)</h2>
+
+          <p class="govuk-!-margin-bottom-1">
+            Use the service to give information about:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              the ‘responsible person’ (this can be an individual or company) who is responsible for ensuring regulations are followed
+            </li>
+            <li>
+            a contact person for people from National Poisons Information Service and Trading Standards to speak to</li><li>the product’s formulation and whether it contains carcinogenic, mutagenic or toxic for reproduction (CMR) substances, and nanomaterials
+            </li>
+          </ul>
+          <p>
+            You also need to upload an image of the label, as a PDF, JPG or PNG and up to 30 MB in size.
+          </p>
+          <p>
+            If your product contains certain nanomaterials, you’ll have to wait 6 months before you place the product on the market.
+          </p>
+          <p>
+            You must submit your notifications for these products before making them available to consumers. If you do not, you may face a penalty of up to £5,000 and a prison term of up to 3 months, or both.
+          </p>
+          <h2 class="govuk-heading-m">
+            If your products were notified in the EU before Brexit
+          </h2>
+          <p class="govuk-!-margin-bottom-1">
+            The process is similar, but you do not need to provide:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              information about whether or not the cosmetic product contains carcinogenic, mutagenic or toxic for reproduction (CMR) substances
+            </li>
+            <li>
+              an image of the label
+            </li>
+          </ul>
+          <p>
+            You can do this manually or via the ’upload’ method below.
+          </p>
+          <p>
+            You must submit your notifications for these products by 11 pm GMT on 29 January 2020. If you do not, you may face a penalty of up to £5,000 and a prison term of up to 3 months, or both. 
+          </p>
+          <p>
+            <a href='guidance/how-to-prepare.html'>
+              How to prepare your notification
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

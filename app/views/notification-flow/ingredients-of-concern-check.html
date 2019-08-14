@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: '/notification-flow/select-formulation-type'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <h1 class='govuk-heading-xl'>
+      Harmful ingredients
+    </h1>
+
+    {% set ralph = {firstname: 'ralph', lastname: 'hawkins'} %}
+
+    {{data | debug("test")}}
+
+    <p>
+      To treat anyone who may be harmed by the product, <span class='no-wrap'>National Poison Centres</span> need the exact amounts of ingredients that may be harmful.
+    </p>
+
+    {% include "../includes/harmful_ingredients.html" %}
+
+    <form action="/notification-flow/ingredients-of-concern-document-upload" method="post" novalidate>
+
+    {# Question needs to be at component level #}
+
+        {{ govukRadios({
+          idPrefix: "does-the-product-contain-any-ingredients-of-concern",
+          name: "does-the-product-contain-any-ingredients-of-concern",
+          fieldset: {
+            legend: {
+              text: "Does the product contain any harmful ingredients?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

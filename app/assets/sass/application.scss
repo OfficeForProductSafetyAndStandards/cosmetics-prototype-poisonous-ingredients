@@ -1,0 +1,80 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-navigation";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+
+
+@mixin app-masthead($width: $govuk-page-width) {
+  // Limit the width of the container to the page width
+  max-width: $width;
+  @include govuk-if-ie8 {
+    width: $width;
+  }
+  // On mobile, add half width gutters
+  margin: 0 $govuk-gutter-half;
+  // On tablet, add full width gutters
+  @include mq($from: tablet) {
+    margin: 0 $govuk-gutter;
+  }
+  // As soon as the viewport is greater than the width of the page plus the
+  // gutters, just centre the content instead of adding gutters.
+  @include mq($and: "(min-width: #{($width + $govuk-gutter * 2)})") {
+    margin: 0 auto;
+  }
+}
+
+.app-masthead {
+ background-color: $govuk-brand-colour;
+ margin-top: -10px;
+ padding-top: 20px;
+}
+
+.app-masthead__container {
+ @include app-masthead;
+ font-size: 0; // Hide whitespace between elements
+ &:after {
+   content: ‘’;
+   display: inline-block;
+   width: 100%;
+ }
+ h1, p { 
+  color: white;
+  }
+  a.govuk-button {
+    background-color: white;
+    color: $govuk-brand-colour;
+    margin-right: 10px;
+    transform: translateY(-5px);
+    &:hover {
+      background-color: rgba(255,255,255,0.75);
+      color: $govuk-brand-colour;
+    }
+  }
+    a {
+      text-decoration: underline;
+      color: white;
+      &:hover {
+        color: rgba(255,255,255,0.75);
+      }
+    }
+  }
+

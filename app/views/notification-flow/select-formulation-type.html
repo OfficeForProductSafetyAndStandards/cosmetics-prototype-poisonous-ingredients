@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/notification-flow/ingredients-document-upload" method="post" novalidate>
+
+        {{ govukRadios({
+          idPrefix: "formulation-type",
+          name: "formulation-type",
+          fieldset: {
+            legend: {
+              text: "How do you want to give the formulation of the cosmetic product?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "choose-a-predefined-frame-formulation",
+              text: "Choose a predefined frame formulation"
+            },
+            {
+              value: "list-ingredients-and-their-exact-concentration",
+              text: "List ingredients and their exact concentration"
+            },
+            {
+              value: "list-ingredients-and-their-concentration-range",
+              text: "List ingredients and their concentration range"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

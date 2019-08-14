@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/notification-flow/ingredients-document-upload" method="post" novalidate>
+
+        {{ govukRadios({
+          idPrefix: "formulation-type",
+          name: "formulation-type",
+          fieldset: {
+            legend: {
+              text: "Is the pH of the product between 3 and 10?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no-it-is-lower-than-3-or-higher-than-10",
+              text: "No, the minimum pH is lower than 3"
+            },
+            {
+              value: "no-it-is-lower-than-3-or-higher-than-10",
+              text: "No, the maximum pH is higher than 10"
+            },
+            {
+              value: "its-a-solid-or-powder-so-it-doesnt-have-a-ph",
+              text: "It does not have a pH because it is solid or powder"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
