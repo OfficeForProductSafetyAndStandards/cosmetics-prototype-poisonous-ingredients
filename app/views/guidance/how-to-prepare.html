@@ -15,7 +15,6 @@ GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
     <h1 class="govuk-heading-xl">
       How to prepare a cosmetic product notification
     </h1>
@@ -49,16 +48,28 @@ GOV.UK Prototype Kit
     <p>
       If you don’t have EU notification files, you need to manually enter information about the product.
     </p>
+    <h2 class='govuk-heading-l'>
+      Information you need for a cosmetic product notification
+    </h2>
   </div>
+
   <div class='govuk-grid-column-full'>
     <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-heading-m">What information to provide</caption>
+      <caption class="govuk-table__caption govuk-heading-m">Product overview</caption>
       <thead class='govuk-table__head'>
         <tr class='govuk-table__row'>
-          <th scope="col" class="govuk-table__header">Information</th>
-          <th scope="col" class="govuk-table__header">Contained in the <span class='no-wrap'>EU notification file</span></th>
-          <th scope="col" class="govuk-table__header">Required for products placed on the market before Brexit</th>
-          <th scope="col" class="govuk-table__header">Required for products placed on the market after Brexit</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Information
+          </th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Contained in the <span class='no-wrap'>EU notification file</span>
+          </th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Required for products placed on the market before Brexit
+          </th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Required for products placed on the market after Brexit
+          </th>
         </tr>
       </thead>
       <tbody class='govuk-table__body'>
@@ -134,20 +145,6 @@ GOV.UK Prototype Kit
         </tr>
         <tr class='govuk-table__row'>
           <td class='govuk-table__cell'>
-                Nanomaterials<br/>(including name, how the user is exposed to the nanomaterials, how the user is instructed to us
-              e the product and if it is listed and used in accordance with EC regulation 1223/2009)</td>
-          <td class='govuk-table__cell'>
-              Only the name of the nanomaterial
-            </td>
-          <td class='govuk-table__cell'>
-              Yes
-            </td>
-          <td class='govuk-table__cell'>
-              Yes
-            </td>
-        </tr>
-        <tr class='govuk-table__row'>
-          <td class='govuk-table__cell'>
               Product category
             </td>
           <td class='govuk-table__cell'>
@@ -165,7 +162,49 @@ GOV.UK Prototype Kit
               Formulation
             </td>
           <td class='govuk-table__cell'>
-              If the information was attached as a separate document, it will not be in the EU file
+              <p>
+                Yes if submitted as a frame formulation or input directly into CPNP.
+              </p>
+              <p>
+                If the information was attached as a separate document, it will not be in the EU file.
+              </p>
+            </td>
+          <td class='govuk-table__cell'>
+              Yes
+            </td>
+          <td class='govuk-table__cell'>
+              Yes
+            </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-heading-m">
+        Nanomaterial
+      </caption>
+      <thead class='govuk-table__head'>
+        <tr class='govuk-table__row'>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Information
+          </th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Contained in the <span class='no-wrap'>EU notification file</span>
+          </th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Required for products placed on the market before Brexit
+          </th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Required for products placed on the market after Brexit
+          </th>
+        </tr>
+      </thead>
+       <tbody class='govuk-table__body'>
+        <tr class='govuk-table__row'>
+          <td class='govuk-table__cell'>
+                Nanomaterial name
+          <td class='govuk-table__cell'>
+              Yes
             </td>
           <td class='govuk-table__cell'>
               Yes
@@ -176,8 +215,8 @@ GOV.UK Prototype Kit
         </tr>
         <tr class='govuk-table__row'>
           <td class='govuk-table__cell'>
-              Harmful ingredients
-            </td>
+              Nanomaterial information
+          </td>
           <td class='govuk-table__cell'>
               No
             </td>
@@ -188,6 +227,28 @@ GOV.UK Prototype Kit
               Yes
             </td>
         </tr>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-heading-m">
+        Harmful ingredients
+      </caption>
+      <thead class='govuk-table__head'>
+        <tr class='govuk-table__row'>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Information
+          </th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Contained in the <span class='no-wrap'>EU notification file</span>
+          </th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Required for products placed on the market before Brexit
+          </th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+            Required for products placed on the market after Brexit
+          </th>
+        </tr>
+      </thead>
+      <tbody class='govuk-table__body'>
         <tr class='govuk-table__row'>
           <td class='govuk-table__cell'>
               Glycols and glycol ethers
