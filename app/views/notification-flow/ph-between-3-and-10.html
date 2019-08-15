@@ -18,11 +18,11 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/notification-flow/ingredients-document-upload" method="post" novalidate>
+      <form action="/notification-flow/image-upload" method="post" novalidate>
 
         {{ govukRadios({
-          idPrefix: "formulation-type",
-          name: "formulation-type",
+          idPrefix: "ph-between-3-and-10",
+          name: "ph-between-3-and-10",
           fieldset: {
             legend: {
               text: "Is the pH of the product between 3 and 10?",
@@ -34,7 +34,7 @@
           items: [
             {
               value: "yes",
-              text: "Yes, the minimum pH is 3 or higher and the maximum pH is 10 or lower"
+              text: "Yes, the minimum pH is 3 or higher, and the maximum pH is 10 or lower"
             },
             {
               value: "no-it-is-lower-than-3-or-higher-than-10",

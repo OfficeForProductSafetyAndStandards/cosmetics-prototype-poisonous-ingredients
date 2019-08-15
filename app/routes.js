@@ -31,3 +31,15 @@ router.post('/notification-flow/ingredients-of-concern-document-upload', functio
   }
 
 })
+
+router.post('/notification-flow/image-upload', function (req,res) {
+
+  let harmfulIngredients = req.session.data['ph-between-3-and-10']
+
+  if (harmfulIngredients === 'no-it-is-lower-than-3-or-higher-than-10') {
+    res.redirect('/notification-flow/ph-range')
+  } else {
+    res.redirect('/notification-flow/image-upload')
+  }
+
+})

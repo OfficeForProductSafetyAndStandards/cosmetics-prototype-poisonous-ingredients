@@ -6,52 +6,51 @@
 
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back"
+    text: "Back",
+    href: 'ph-between-3-and-10.html'
   }) }}
 {% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
 
-      <form action="/notification-flow/ingredients-document-upload" method="post" novalidate>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          What is the pH of the cosmetic product?
+        </h1>
 
-        {{ govukRadios({
-          idPrefix: "formulation-type",
-          name: "formulation-type",
-          fieldset: {
-            legend: {
-              text: "Is the pH of the product between 3 and 10?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--xl"
-            }
-          },
+        <form action="/notification-flow/image-upload" method="post">
 
-          items: [
-            {
-              value: "yes",
-              text: "Yes"
-            },
-            {
-              value: "no-it-is-lower-than-3-or-higher-than-10",
-              text: "No, the minimum pH is lower than 3"
-            },
-            {
-              value: "no-it-is-lower-than-3-or-higher-than-10",
-              text: "No, the maximum pH is higher than 10"
-            },
-            {
-              value: "its-a-solid-or-powder-so-it-doesnt-have-a-ph",
-              text: "It does not have a pH because it is solid or powder"
-            }
-          ]
-        }) }}
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="expiry-hint" role="group">
+              <div class="govuk-date-input" id="expiry">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group govuk-!-margin-right-4">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-month">
+                      Minimum pH
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="expiry-month" name="expiry-month" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-year">
+                      Maximum pH
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="expiry-year" name="expiry-year" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
 
-        {{ govukButton({
-          text: "Continue"
-        }) }}
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
 
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
+  </main>
+</div>
 {% endblock %}
