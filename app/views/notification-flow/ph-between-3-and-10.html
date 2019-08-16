@@ -18,7 +18,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/notification-flow/image-upload" method="post" novalidate>
+      <form action="/notification-flow/ph-range" method="post" novalidate>
 
         {{ govukRadios({
           idPrefix: "ph-between-3-and-10",
@@ -45,7 +45,7 @@
               text: "No, the maximum pH is higher than 10"
             },
             {
-              value: "its-a-solid-or-powder-so-it-doesnt-have-a-ph",
+              value: "yes",
               text: "It does not have a pH because it is a solid or powder"
             }
           ]

@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Home",
+    href: "/"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class='govuk-heading-xl'>
+          How to prepare images for notification
+      </h1>
+
+      <p>
+        As part of your product notification upload the original label artwork – the artwork used when the product was first placed on the market.
+      </p>
+
+     <p>
+       To help National Poison Information Services identify the product upload a photo of the product and its packaging.
+     </p>
+
+     <p class='govuk-!-margin-bottom-1'>
+       You can upload up to 10 images. Files can be up to 30MB:
+     </p>
+     <ul class='govuk-list govuk-list--bullet'>
+      <li>JPG</li>
+      <li>PDF</li>
+      <li>PNG</li>
+     </ul>
+
+    <p>
+      The image must be in focus and all packaging text legible.
+    </p>
+
+    <p>
+      What the image shows differs depending on the type of cosmetic product and how its packaged.
+    </p>
+
+    <h2 class='govuk-heading-m govuk-!-padding-top-4'>
+      Example 1
+    </h2>
+    <p>
+      The product has no secondary packaging (for example, a standalone bottle of shampoo).
+    </p>
+    <p>
+      You must supply the label artwork and you can optionally supply a clear photo of the bottle.
+    </p>
+    <h2 class='govuk-heading-m govuk-!-padding-top-4'>
+      Example 2
+    </h2>
+    <p>
+      The product has secondary packaging (for example, a bottle of shampoo in a box).
+    </p>
+    <p>
+      You must supply the label artwork and a clear photo of the box. You can optionally attach the artwork for the bottle and a photo of the bottle.
+    </p>
+    <h2 class='govuk-heading-m govuk-!-padding-top-4'>
+      Example 3
+    </h2>
+    <p>
+      The product contains several components (for example, hair dye).
+    </p>
+    <p class='govuk-!-margin-bottom-8'>
+      You must supply the artwork and, a photo of the set and you can optionally attach the original labelling of each bottle and the photograph of each bottle.
+    </p>
+    <p>
+      If the product features mandatory information on a separate leaflet, label, tag or card, you must attach this artwork as well. 
+    </p>
+    </div>
+  </div>
+{% endblock %}
+
+
