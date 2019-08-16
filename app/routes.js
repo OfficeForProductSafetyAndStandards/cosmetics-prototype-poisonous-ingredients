@@ -13,7 +13,7 @@ router.post('/notification-flow/ingredients-document-upload', function (req, res
   let formulationType = req.session.data['formulation-type']
 
   if (formulationType === 'choose-a-predefined-frame-formulation') {
-    res.redirect('/notification-flow/ingredients-of-concern-check')
+    res.redirect('/notification-flow/select-frame-formulation')
   } else {
     res.redirect('/notification-flow/ingredients-document-upload')
   }

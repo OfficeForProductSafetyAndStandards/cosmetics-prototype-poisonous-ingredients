@@ -1,4 +1,4 @@
-\
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -11,8 +11,7 @@
 
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back",
-    href: "select-formulation-type.html"
+    text: "Back"
   }) }}
 {% endblock %}
 
@@ -21,26 +20,25 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class='govuk-heading-xl'>
-          Upload an image of the product or it’s label
+          What is the product name?
       </h1>
 
       <p>
-        The image must be a JPG, PNG or PDF.
+        Use the name as it appears on the label, including the brand name, range and product name.
       </p>
 
-      <form action="#" method="post" novalidate>
-        {{ govukFileUpload({
-          id: "file-upload-1",
-          name: "file-upload-1",
+      <form action="/notification-flow/select-formulation-type" method="post" novalidate>
+        {{ govukInput({
           label: {
-            text: "Upload a file"
-          }
+            text: "Product name",
+            classes: "govuk-label--m"
+          },
+          id: "product-name",
+          name: "product-name"
         }) }}
-
         {{ govukButton({
           text: "Continue"
         }) }}
-
       </form>
     </div>
   </div>
