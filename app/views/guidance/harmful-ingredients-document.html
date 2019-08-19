@@ -21,7 +21,7 @@
       </h1>
 
       <p>
-        If you notify a cosmetic product using a frame formulation and your product contains ’harmful ingredients’ you need to submit a list of the ingredients and their concentration.
+        If you notify a cosmetic product using a frame formulation and your product contains ‘harmful ingredients’ you need to submit a list of the ingredients and their concentration.
       </p>
 
       {% include "../includes/harmful_ingredients.html" %}
@@ -37,7 +37,7 @@
       </p>
       {{ govukTable({
           caption: "Example harmful ingredients document",
-          firstCellIsHeader: true,
+          firstCellIsHeader: false,
           head: [
             {
               text: "Ingredient"
@@ -61,7 +61,7 @@
                 text: "Sodium Chlorate"
               },
               {
-                text: "20%",
+                text: "0.75%",
                 format: "numeric"
               }
             ]
