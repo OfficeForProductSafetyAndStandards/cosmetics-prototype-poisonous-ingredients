@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Home",
+    href: "/"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class='govuk-heading-xl'>
+        How to submit a product notification
+      </h1>
+
+      <p>
+        You can use data from an EU notification or give the information manually. Using the data from your EU notification means you need to answer fewer questions and you can upload up to 100 at a time.
+      </p>
+      <p>
+        The data from your EU notification must be in the same format as a ZIP file exported from CPNP.
+      </p>
+      <p>
+        You can use an EU notification file regardless of whether the product was notified before Brexit or not.
+      </p>
+
+      <form action="/smart-answers/before-or-after-brexit" method="post" novalidate>
+
+        {{ govukRadios({
+          idPrefix: "do-you-have-eu-notification",
+          name: "do-you-have-eu-notification",
+          fieldset: {
+            legend: {
+              text: "Do you have the EU notification file?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No, I will enter information manually"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

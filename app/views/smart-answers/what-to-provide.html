@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "before-or-after-brexit"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class='govuk-heading-xl'>
+        What information you need to submit
+      </h1>
+
+      <p class=''>
+        What to prepare if you are <strong>{% if data['do-you-have-eu-notification'] == 'yes' %} uploading an EU notification file {% else %} providing information manually {% endif %}</strong> for a <strong>{% if data['before-brexit'] == 'yes' %} product on the market before Brexit {% else %} new product {% endif %}</strong>.
+      </p>
+
+      {% if data['before-brexit'] == 'yes' %}
+        {% if data['do-you-have-eu-notification'] == 'yes' %}
+          {% include "../includes/pre-brexit-upload.html" %}
+        {% else %}
+          {% include "../includes/pre-brexit-manual.html" %}
+        {% endif %}
+      {% else %}
+        {% if data['do-you-have-eu-notification'] == 'yes' %}
+          {% include "../includes/post-brexit-upload.html" %}
+        {% else %}
+          {% include "../includes/post-brexit-manual.html" %}
+        {% endif %}
+      {% endif %}
+
+    </div>
+  </div>
+{% endblock %}

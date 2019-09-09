@@ -12,7 +12,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "select-formulation-type.html"
+    href: "ingredients-of-concern-check"
   }) }}
 {% endblock %}
 
@@ -21,12 +21,11 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class='govuk-heading-xl'>
-          List of harmful ingredients
+        Ingredients and their quantity
       </h1>
-
       {# No visited state is for prototype only #}
       <p>
-        Read <a href='/guidance/harmful-ingredients-document' target="_blank" class='govuk-link--no-visited-state'>how to prepare your list of harmful ingredients (opens in a new tab)</a>.
+        <a href='/guidance/harmful-ingredients-document' target="_blank" class='govuk-link--no-visited-state'>How to prepare your list of ingredients (opens in a new tab)</a>.
       </p>
       {% include "../includes/document_types.html" %}
 

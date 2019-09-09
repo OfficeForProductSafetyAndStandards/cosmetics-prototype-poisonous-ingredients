@@ -11,37 +11,34 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "product-name"
+    href: "do-you-have-eu-notification-file"
   }) }}
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/notification-flow/ingredients-document-upload" method="post" novalidate>
+
+      <form action="/smart-answers/what-to-provide" method="post" novalidate>
 
         {{ govukRadios({
-          idPrefix: "formulation-type",
-          name: "formulation-type",
+          idPrefix: "before-brexit",
+          name: "before-brexit",
           fieldset: {
             legend: {
-              text: "How do you want to give the formulation of the cosmetic product?",
+              text: "Was the product notified before Brexit?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
             }
           },
           items: [
             {
-              value: "choose-a-predefined-frame-formulation",
-              text: "Choose a predefined frame formulation"
+              value: "yes",
+              text: "Yes"
             },
             {
-              value: "list-ingredients-and-their-exact-concentration",
-              text: "List ingredients and their exact concentration"
-            },
-            {
-              value: "list-ingredients-and-their-concentration-range",
-              text: "List ingredients and their concentration range"
+              value: "no",
+              text: "No"
             }
           ]
         }) }}

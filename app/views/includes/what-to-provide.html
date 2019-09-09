@@ -1,0 +1,216 @@
+
+{% macro cpnpFile() %}
+  <p>
+    Most, but not all information is not contained in the EU notification file. Some information will need to be added once the file has been uploaded.
+  </p>
+  <p>
+    After you have uploaded the EU notification file, you will be told what you need to add.
+  </p>
+{% endmacro %}
+
+{% macro formulationUpload() %}
+  <h2 class="govuk-heading-m">
+    Formulation
+  </h2>
+  <p>
+    If you added the formulation as a seperate document when you notified the EU, you need to provide this seperately.
+  </p>
+  <p>
+    <a href='../guidance/ingredients-document.html' class='govuk-link--no-visited-state'>
+      How to prepare a list ingredients
+    </a>
+  </p>
+{% endmacro %}
+
+{% macro postBrexitFormulation() %}
+  <h2 class="govuk-heading-m">
+    Formulation
+  </h2>
+  <p>
+    What you need to provide depends on how the formulation was given in the original EU notification. 
+  </p>
+  <p>
+    For products where the formulation was given as either ‘frame formulation’ or ‘ingredients and their concentration ranges’ you need to provide exact quantities of ingredients important to Poison Information Services.
+  </p>
+  {% include '../includes/harmful_ingredients_summary.html' %}
+  <p>
+    For products where the formulation was given as either ‘ingredients and their concentration ranges’ or ‘ingredients and their exact concentration’ and uploaded as a seperate document when notified in the EU, you need to provide this seperately.
+  </p>
+  <p>
+    <a href='../guidance/ingredients-document.html' class='govuk-link--no-visited-state'>
+      How to prepare a list of ingredients
+    </a>
+  </p>
+{% endmacro %}
+
+
+{% macro nanomaterial() %}
+  <h2 class="govuk-heading-m">
+    Nanomaterials
+  </h2>
+  <p>
+    If your product contains nanomaterials you need to say if they are listed in annex 4, 5, or 6 of EC Regulation 1223/2009 and if they are used in accordance with any restrictions for that material. If its not, you need to provide a seperate nanomaterial notification.
+  </p>
+  <p>
+    <a href='#' class='govuk-link--no-visited-state'>How to notify nanomaterials</a>
+  </p>
+{% endmacro %}
+
+{% macro productImage() %}
+  <h2 class="govuk-heading-m">
+    Product image
+  </h2>
+  <p>
+    Upload the artwork for the product label. To help Poison Information Services identify the product, you can upload a photo of the product and also its packaging.
+  </p>
+  <p>
+    <a href='../guidance/image-guidance' class='govuk-link--no-visited-state'>How to prepare images for notifications</a>
+  </p>
+{% endmacro %}
+
+{% macro generalInformationHeading() %}
+  <h2 class='govuk-heading-m'>
+    Overview
+  </h2>
+{% endmacro %}
+
+{% macro productName() %}
+  <p>
+    Product name – as it appears on the label, including the brand name, range and product name.
+  </p>
+{% endmacro %}
+
+{% macro under3() %}
+  <p>
+    If the product is intended for children under 3.
+  </p>
+{% endmacro %}
+
+{% macro shades() %}
+  <p>
+    List of shades – if the product is sold in shades and all aspects of the notification are the same, you can notify multiple shades using a single notification.
+  </p>
+{% endmacro %}
+
+{% macro multiComponent() %}
+  <p>
+    Single or multi-item kit – if the product has multiple items that are sold together and are mixed or used sequentailly. For example, a hair dye set or skin peeling kit.
+  </p>
+{% endmacro %}
+
+{% macro multiComponentInfo() %}
+  <h2 class='govuk-heading-m'>
+    Multi-item kits
+  </h2>
+  <p class='govuk-!-margin-bottom-1'>
+    If the product is a multi-item kit you need to provide:
+  </p>
+  <ul class='govuk-list govuk-list--bullet'>
+    <li>
+      the name of each component
+    </li>
+    <li>
+      if the items are mixed or used in sequence
+    </li>
+    <li>
+      the pH range if the product is a hair dye, or if its pH is below 3 or above 10
+    </li>
+  </ul>
+{% endmacro %}
+
+{% macro componentInformationHeading() %}
+  <h2 class='govuk-heading-m'>
+    Details
+  </h2>
+  <p>
+    For single-item products, you need to provide this information once. For <span class='no-wrap'>mult-item</span> kits, you need to provide this information for each item in the kit.
+  </p>
+{% endmacro %}
+
+{% macro physicalForm() %}
+  <p>
+    The physical form of the product (for example solid or powder)
+  </p>
+{% endmacro %}
+
+{% macro applicator() %}
+  <p>
+    If the product comes in an applicator (for example, a wipe, sponge, patch, pad or encapsulated)
+  </p>
+{% endmacro %}
+
+{% macro cmr() %}
+  <p>
+    If the product contain substances listed as Category 1A or 1B mutagens, carcinogens or reproductive toxicants (CMRs).
+  </p>
+{% endmacro %}
+
+{% macro nanomaterials() %}
+  <h3 class="govuk-heading-s">
+    Nanomaterials
+  </h3>
+  <p class='govuk-!-margin-bottom-1'>
+    For each nanomaterials the product or item has you need to provide:
+  </p>
+  <ul class='govuk-list govuk-list--bullet'>
+    <li>IUPAC name</li>
+    <li>purpose</li>
+    <li>how the user likely to be exposed to the nanomaterial</li>
+    <li>if the user is instructed to rinse off or leave on the product</li>
+  </ul>
+  <p>
+    If the nanomaterial is not listed in <a href="https://harmful-ingredients.herokuapp.com/guidance/how-to-prepare#" class='govuk-link--no-visited-state'>EC regulation 1223/2009, Annex 4, 5, or 6</a> or used in accordance with the restrictions for that material you need to provide more information.
+  </p>
+  <p>
+    <a href='#' class='govuk-link--no-visited-state'>How to notify nanomaterials</a>
+  </p>
+{% endmacro %}
+
+{% macro formulation() %}
+  <h2 class="govuk-heading-m">
+    Formulation
+  </h2>
+  <p>
+    There are 3 ways to submit the formulation of the product:
+  </p>
+  <ul class='govuk-list'>
+    <li class='govuk-!-padding-bottom-2'>
+      <h3 class="govuk-heading-s">
+        Frame formulation
+      </h3>
+      <p>
+        A ‘frame formulation’ lists the category or function of ingredients and their maximum concentration in the product. There are frame formulations for most cosmetic products.
+      </p>
+      <p>
+        <a href='/public/documents/frame-formulations.pdf' download class='govuk-link--no-visited-state'>
+          Download the list of frame formulations (PDF)
+        </a>
+      </p>
+    </li>
+    <li class='govuk-!-padding-bottom-2'>
+      <h3 class="govuk-heading-s">
+        List the ingredients and their concentration range
+      </h3>
+      <p>
+        For each ingredient give the ingredient and the amount as a range percentage weight for weight (% w/w). For example, aqua above 75%, up to and including 100%.
+      </p>
+      <p>
+        <a href="../guidance/ingredients-document" class="govuk-link--no-visited-state">How to prepare your ingredients list</a>
+      </p>
+    </li>
+    <li class='govuk-!-padding-bottom-2'>
+      <h3 class="govuk-heading-s">
+        List the ingredients and their exact concentration
+      </h3>
+      <p>
+        For each ingredient give the ingredient and the amount as percentage weight for weight (% w/w).
+      </p>
+      <p>
+        For example, aqua 85% w/w.
+      </p>
+      <p>
+        <a href="../guidance/ingredients-document" class="govuk-link--no-visited-state">How to prepare your ingredients list</a>
+      </p>
+    </li>
+  </ul>
+{% endmacro %}

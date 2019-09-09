@@ -1,0 +1,69 @@
+
+{% macro cpnpFile() %}
+  <p>
+    Most, but not all information is not contained in the EU notification file. Some information will need to be added once the file has been uploaded.
+  </p>
+  <p>
+    After you have uploaded the EU notification file, you will be told what you need to add.
+  </p>
+{% endmacro %}
+
+{% macro formulation() %}
+  <h2 class="govuk-heading-m">
+    Formulation
+  </h2>
+  <p>
+    If you added the formulation as a seperate document when you notified the EU, you need to provide this seperately.
+  </p>
+  <p>
+    <a href='../guidance/ingredients-document.html' class='govuk-link--no-visited-state'>
+      How to prepare a list ingredients
+    </a>
+  </p>
+{% endmacro %}
+
+{% macro postBrexitFormulation() %}
+  <h2 class="govuk-heading-m">
+    Formulation
+  </h2>
+  <p>
+    What you need to provide depends on how the formulation was given in the original EU notification. 
+  </p>
+  <p>
+    For products where the formulation was given as either ‘frame formulation’ or ‘ingredients and their concentration ranges’ you need to provide exact quantities of ingredients important to Poison Information Services.
+  </p>
+  {% include '../includes/harmful_ingredients_summary.html' %}
+  <p>
+    For products where the formulation was given as either ‘ingredients and their concentration ranges’ or ‘ingredients and their exact concentration’ and uploaded as a seperate document when notified in the EU, you need to provide this seperately.
+  </p>
+  <p>
+    <a href='../guidance/ingredients-document.html' class='govuk-link--no-visited-state'>
+      How to prepare a list of ingredients
+    </a>
+  </p>
+{% endmacro %}
+
+
+{% macro nanomaterial() %}
+  <h2 class="govuk-heading-m">
+    Nanomaterials
+  </h2>
+  <p>
+    If your product contains nanomaterials you need to say if they are listed in annex 4, 5, or 6 of EC Regulation 1223/2009 and if they are used in accordance with any restrictions for that material. If its not, you need to provide a seperate nanomaterial notification.
+  </p>
+  <p>
+    <a href='#' class='govuk-link--no-visited-state'>How to notify nanomaterials</a>
+  </p>
+{% endmacro %}
+
+{% macro productImage() %}
+  <h2 class="govuk-heading-m">
+    Product image
+  </h2>
+  <p>
+    Upload the artwork for the product label. To help Poison Information Services identify the product, you can upload a photo of the product and also its packaging.
+  </p>
+  <p>
+    <a href='../guidance/image-guidance' class='govuk-link--no-visited-state'>How to prepare images for notifications</a>
+  </p>
+{% endmacro %}
