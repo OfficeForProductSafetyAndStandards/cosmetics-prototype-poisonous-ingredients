@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-
+{% import "../includes/what-to-provide.html" as content %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -21,11 +21,11 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class='govuk-heading-xl'>
-        What information you need to submit
+        {{ content.informationYouNeedToSubmit() }}
       </h1>
 
       <p class=''>
-        What to prepare if you are <strong>{% if data['do-you-have-eu-notification'] == 'yes' %} uploading an EU notification file {% else %} providing information manually {% endif %}</strong> for a <strong>{% if data['before-brexit'] == 'yes' %} product on the market before Brexit</strong>.{% else %} new product</strong>.{% endif %}
+        What to provide if you are <strong>{% if data['do-you-have-eu-notification'] == 'yes' %} uploading an EU notification file {% else %} providing information manually {% endif %}</strong> for a <strong>{% if data['before-brexit'] == 'yes' %} product on the market before Brexit</strong>.{% else %} new product</strong>.{% endif %}
       </p>
 
       {% if data['before-brexit'] == 'yes' %}

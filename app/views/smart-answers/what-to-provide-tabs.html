@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% import "../includes/what-to-provide.html" as content %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "before-or-after-brexit"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class='govuk-heading-xl'>
+        {{ content.informationYouNeedToSubmit() }}
+      </h1>
+    </div>
+
+    <div class='govuk-grid-column-two-thirds'>
+    {% set pastDayHtml %}
+    <h2 class="govuk-heading-l">Using EU notification file</h2>
+    <p>
+      What to provide if you are uploading an EU notification file.
+    </p>
+    {{ content.cpnpFile() }}
+    <h3 class="govuk-heading-m">Information needed for all products</h3>
+    {{ content.formulationUpload('govuk-heading-s') }}
+    {{ content.nanomaterial('govuk-heading-s') }}
+    <h3 class="govuk-heading-m">Further information needed for products notified after Brexit</h3>
+    {{ content.postBrexitFormulation('govuk-heading-s') }}
+    {{ content.productImage('govuk-heading-s') }}
+    {% endset -%}
+    
+    {% set pastWeekHtml %}
+    <h2 class="govuk-heading-l">Without EU notification file</h2>
+    <h3 class="govuk-heading-m">Information needed for all products</h3>
+    {{ content.productName() }}
+    {{ content.shades() }}
+    {{ content.multiComponent() }}
+    {{ content.multiComponentInfo('govuk-heading-s') }}
+    {{ content.componentInformationHeading('govuk-heading-s') }}
+    {{ content.nanomaterials('govuk-heading-s') }}
+    {{ content.formulation('govuk-heading-s') }}
+    <h3 class="govuk-heading-m">Further information needed for products notified after Brexit</h3>
+    {{ content.physicalForm() }}
+    {{ content.applicator() }}
+    {{ content.cmr() }}
+    {{ content.productImage('govuk-heading-s') }}
+    {% endset -%}
+
+    {{ govukTabs({
+      items: [
+        {
+          label: "Using EU notification file",
+          id: "using-eu-notification-file",
+          panel: {
+            html: pastDayHtml
+          }
+        },
+        {
+          label: "Without EU notification file",
+          id: "without-eu-notification-file",
+          panel: {
+            html: pastWeekHtml
+          }
+        }
+      ]
+    }) }}
+
+    </div>
+  </div>
+{% endblock %}
